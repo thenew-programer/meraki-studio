@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  @media (max-width: 768px) { /* Adjust max-width for your preferred breakpoint */
+    .MobileBooking {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 400px;
+        height: 50px;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .MAGAZINE-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        background-color: black;
+    }
+
+    .RÉSERVER-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        background-color: #757C46;
+    }
+
+    .MAGAZINE-text {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: serif;
+    }
+
+    .MAGAZINE-text::after {
+        content: '';
+        position: absolute;
+        background-color: #333;
+        transform: translateX(-50%) scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      .MAGAZINE-text:hover {
+        color: rgba(105, 95, 76, 0.8);
+        /* Change text color on hover */
+      }
+
+    
+    .RÉSERVER-text {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: serif;
+    }
+
+
+    .RÉSERVER-text::after {
+        content: '';
+        position: absolute;
+        background-color: #020202;
+        transform: translateX(-50%) scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      .RÉSERVER-text:hover {
+        color: rgba(28, 26, 21, 0.8);
+        /* Change text color on hover */
+      }
+}
+
+/* Hide MobileBooking on larger screens */
+@media (min-width: 400px) {
+    .MobileBooking {
+        display: none;
+    }
+}
